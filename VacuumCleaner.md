@@ -54,6 +54,16 @@ Another important adjustment was my original intention for the robot to move in 
 
 # 4. DIFICULTIES
 
+Throughout the development of this project, I encountered several challenges that required rethinking and adjusting my approach.
+
+1. Placing states in functions: At the beginning, I structured the program by placing the state logic inside separate functions, which left the main loop almost empty. This approach seemed logical at first, as I wanted to keep the loop clean and organized. However, I quickly realized that this structure made the code harder to follow and maintain, and it complicated the flow of state transitions. After some reflection, I restructured the program to include only the essential functions.
+
+2. Spiral movement: The formula for the spiral movement was straightforward, but I initially made a small mistake by placing the variable updates in the wrong location. Specifically, I accidentally updated the variables controlling the robot’s speed and angular velocity in a way that caused it to trace an oval rather than a proper spiral. It took some time to figure out why the robot was behaving this way, but once I identified the issue, I corrected the variable placement, ensuring the spiral expanded correctly.
+
+3. Using sleep: At one point, I used sleep(), which led to unintended delays. This was an oversight, as the project specifically required avoiding sleep() to maintain a non-blocking execution. After spotting this, I removed all sleep() calls and ensured the program relied on more appropriate methods for managing time without blocking the main thread.
+
+4. Writing this blog: Finally, creating this blog required learning how to use GitHub Pages, which was a completely new experience for me. I had to familiarize with the platform, including how to set up, format, and publish content.
+
 # 5. FINAL VIDEO OF THE ALGORITHM
 
 Se adjunta un video demostrativo que muestra el algoritmo en funcionamiento. [Incluir enlace al video aquí]
