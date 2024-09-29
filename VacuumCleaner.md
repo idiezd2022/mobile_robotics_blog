@@ -33,7 +33,7 @@ To create the algorithm solution we need the next theorical concepts:
 
 My algorithm is designed to allow the robotic vacuum cleaner to move efficiently, using a navigation strategy based on wall bouncing. The goal of this technique is to maximize the coverage of the area while avoiding obstacles, ensuring that the vacuum cleaner explores the largest possible space available. The state machine used is:
 
-![State Machine](statemachinep1.png)
+![State Machine](p1images/statemachinep1.png)
 
 The algorithm begins in an initial state called SPIRAL, where the vacuum cleaner moves in a spiral pattern. This movement not only allows the vacuum to advance and clean the area effectively, but also gradually increases its speed, optimizing cleaning time. As the vacuum moves forward, the bumper is used to detect any obstacles that may interrupt its path.
 
@@ -48,8 +48,8 @@ During the development of this project, several key ideas shaped the final outco
 Another important adjustment was my original intention for the robot to move in straight lines in random directions. While this seemed like a good way to explore, I quickly realized that it didn't cover enough ground and increased the risk of the robot colliding with obstacles or getting stuck. By rethinking this approach, I was able to improve the robot's ability to navigate the space more effectively.
 
 <div style="display: flex; flex-wrap: nowrap; justify-content: space-between; gap: 10px;">
- <img src="lineaarecta.png" alt="Before" width="400" style="border: 2px solid black;">
- <img src="lineacurva.png" alt="After" width="400" style="border: 2px solid black;">
+ <img src="p1images/lineaarecta.png" alt="Before" width="400" style="border: 2px solid black;">
+ <img src="p1images/lineacurva.png" alt="After" width="400" style="border: 2px solid black;">
 </div>
 
 # 4. DIFICULTIES
