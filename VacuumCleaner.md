@@ -64,12 +64,9 @@ Throughout the development of this project, I encountered several challenges tha
 
 4. Writing this blog: Finally, creating this blog required learning how to use GitHub Pages, which was a completely new experience for me. I had to familiarize with the platform, including how to set up, format, and publish content.
 
-# 5. FINAL VIDEO OF THE ALGORITHM
+# 5. VIDEO OF THE ALGORITHM
 
-[Video Vacuum cleaner](https://urjc-my.sharepoint.com/:v:/g/personal/i_diezd_2022_alumnos_urjc_es/ER4M29brXlRDl2lvbxE1JsUB3x4IVXTgQU_WdYtsLEO2fA?e=sUdUaQ&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7fX0%3D)
-
-
-Finally, this practice has been interesting to do :)
+Click on the link to see it! -> [Vacuum cleaner](https://urjc-my.sharepoint.com/:v:/g/personal/i_diezd_2022_alumnos_urjc_es/ER4M29brXlRDl2lvbxE1JsUB3x4IVXTgQU_WdYtsLEO2fA?e=sUdUaQ&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7fX0%3D) :)
 
 
 
