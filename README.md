@@ -1,8 +1,10 @@
-# mobile_robotics_blog
+# BLOG OF MOBILE ROBOTICS :D
 
-Hi! My projects are here:
+Hi! 
+
+My projects are here:
 
 - [P1: Vacuum Cleaner Documentation](VacuumCleaner.md)
-- [P2]
-- [P3]
-- Others soon ....
+- Others soon...
+
+[DECORACION](encabezado.png)
