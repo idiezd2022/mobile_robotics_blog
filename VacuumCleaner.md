@@ -42,10 +42,17 @@ When the sensor detects a collision, the algorithm transitions to the TURN state
 Once the vacuum has completed its turn, the algorithm switches to the FORWARD state, where the vacuum moves forward again in a straight line. This combination of states ensures that the vacuum not only avoids obstacles but also continues cleaning efficiently. The state transitions occur smoothly, enabling the robot to quickly react to the changing conditions in its environment.
 
 
+# 3. THE PROCESS
+During the development of this project, several key ideas shaped the final outcome. Initially, I did not plan to use an initial spiral pattern. The theory suggested using an "S" shaped movement, which I believed was the best option to cover as much space as possible. However, this approach proved to be too complicated. After the recomendation of the professor, I implemented the spiral movement instead, which turned out to be more efficient and manageable.
 
+Another important adjustment was my original intention for the robot to move in straight lines in random directions. While this seemed like a good way to explore, I quickly realized that it didn't cover enough ground and increased the risk of the robot colliding with obstacles or getting stuck. By rethinking this approach, I was able to improve the robot's ability to navigate the space more effectively.
 
-# 3. THE PROCESS AND THE REALICED 
-# 4. DIFICULTIES AND THE 
+<div style="display: flex; flex-wrap: nowrap; justify-content: space-between; gap: 10px;">
+ <img src="lineaarecta.png" alt="Before" width="400" style="border: 2px solid black;">
+ <img src="lineacurva.png" alt="After" width="400" style="border: 2px solid black;">
+</div>
+
+# 4. DIFICULTIES
 
 # 5. FINAL VIDEO OF THE ALGORITHM
 
