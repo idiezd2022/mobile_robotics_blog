@@ -1,5 +1,3 @@
-<div style="background-color: darkblue; padding: 10px;">
- 
 # PRACTICE 2: DOCUMENTATION OF FOLLOW LINE
 
  Irene Diez de Toro
@@ -109,4 +107,7 @@ Lastly, the other circuits I worked with were more complex. The Ackerman maps, i
 
 Click on the link to see it! -> [Follow line f1](https://urjc-my.sharepoint.com/:v:/g/personal/i_diezd_2022_alumnos_urjc_es/EW1LQheTLhBDkasUOvaXDXQBFv_15ddIiCYSZQSe-a8Seg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=MjNSFI) :)
 
-</div>
+
+
+
+
