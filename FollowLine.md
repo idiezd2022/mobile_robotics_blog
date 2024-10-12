@@ -32,6 +32,33 @@ A system of devices or set of devices, that manages, commands, directs or regula
 
 # 3. THE PROCESS
 
+- Image filter
+The first steps involved filtering the image and focusing on the specified pixel. Below are images showing the progression:
+
+Using the provided code for image filtering, I created a square simulating the region I wanted to focus on, while also experimenting with different colors using the color filter. To ensure accurate detection, I iterated over the rows and columns of pixels within the defined region, analyzing each pixel to determine if it matched the target color range. This process helped me refine the filter by adjusting the color thresholds until I could reliably detect the red line, which was crucial for ensuring that the car would follow the correct path.
+
+<p align="center">
+  <img src="p2images/redd.png" alt="Before" width="30%" style="border: 2px solid black;">
+  &nbsp;&nbsp;&nbsp;
+  <img src="p2images/blue.png" alt="During" width="30%" style="border: 2px solid black;">
+  &nbsp;&nbsp;&nbsp;
+  <img src="p2images/green.png" alt="After" width="30%" style="border: 2px solid black;">
+</p>
+
+After several modifications, I managed to achieve the following result:
+
+![REGION](p2images/region.png)
+
+However, once I reached this point, I wasn’t sure how to proceed or how to use this information effectively. This led me to rethink and restructure the entire approach, shifting my focus towards extracting relevant data from the filtered region and using it to calculate the car’s positional error. This restructuring allowed me to develop a more robust system for tracking the line, enabling smoother movement for the car. Eventually, I managed to filter the entire image and realized that focusing on a single pixel in the region of interest was the most efficient approach. This pixel would serve as the reference point for calculating the error between the car’s position and the red line, which significantly simplified the processing and improved the responsiveness of the control algorithm.
+
+![FINAL FILTER](p2images/final.png)
+
+- PID Control Implementation
+
+For the PID control, I conducted extensive testing with various gain values to optimize the performance of the control algorithm. I recorded my findings in a table to compare the results effectively. Below is an image displaying some of the tested values for the different gains.This table helped me visualize the impact of different proportional, integral, and derivative gains on the car's responsiveness and stability while following the line. By analyzing these results, I was able to make informed adjustments to the PID parameters to enhance the car's performance on the track.
+
+![PIDS VALUES](p2images/pid.png)
+
 
 # 4. DIFICULTIES
 
