@@ -35,7 +35,14 @@ A system of devices or set of devices, that manages, commands, directs or regula
 
 # 4. DIFICULTIES
 
+During the development of this project, I faced several challenges that affected the progress and implementation of the car's control algorithm.
+
+First, I had difficulties with image filtering. At the beginning, I didn’t fully understand how to extract the desired color from the image and then follow it. Even though I had the reference code provided by the professor and available documentation, it took me some time to correctly adjust the color filter and get the appropriate values in the RGB color space. Additionally, in one of the classes, the professor suggested that I focus on a specific region of the red line to facilitate tracking. Initially, I couldn’t implement this correctly, which caused the car to struggle with following the line accurately. Eventually, I managed to solve this by focusing on a single point within the red line region to calculate the positional error, which significantly improved the tracking performance.
+
+Another major challenge was the implementation of the PID controller. When I started working on this, I didn’t have a clear understanding of how it worked, as the theory behind PID hadn’t yet been covered in class. To overcome this, I decided to research on my own. I consulted technical documentation and websites that explained the PID theory, which allowed me to grasp the basic concepts and how to implement it in my code. However, adjusting the constant values (the proportional, integral, and derivative "K" values) was particularly tricky, especially in curves, where controlling the car’s behavior was more challenging.
+
+Lastly, the other circuits I worked with were more complex. The Ackerman maps, in particular, were very difficult for me to understand, especially in terms of how to adjust the values and efficiently control the car in those environments. Due to the complexity of adapting my code for those circuits, I decided not to focus on them and instead optimize my solution for the simpler circuits.
 
 # 5. VIDEO OF THE ALGORITHM
 
-Click on the link to see it! -> [Follow line f1]() :)
+Click on the link to see it! -> [Follow line f1](https://urjc-my.sharepoint.com/:v:/g/personal/i_diezd_2022_alumnos_urjc_es/EW1LQheTLhBDkasUOvaXDXQBFv_15ddIiCYSZQSe-a8Seg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=MjNSFI) :)
