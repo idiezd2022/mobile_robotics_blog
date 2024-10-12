@@ -42,11 +42,18 @@ In the event that the red line is not detected (for example, if the car strays t
 Lastly, I will present images showing how long my algorithm takes on various maps, as the time taken for the simpler map can be seen in the video provided at the end of the page.
 
 <p align="center">
-  <img src="p2images/Nugburbing.png" alt="Nugburbing" width="30%" style="border: 2px solid black;">
+  <img src="p2images/Nugburbing.png" alt="Nugburbing" width="100%" style="border: 2px solid black;">
   &nbsp;&nbsp;&nbsp;
-  <img src="p2images/Montmelo.png" alt="Montmelo" width="30%" style="border: 2px solid black;">
+</p>
+
+<p align="center">
+  <img src="p2images/Montmelo.png" alt="Nugburbing" width="100%" style="border: 2px solid black;">
   &nbsp;&nbsp;&nbsp;
-  <img src="p2images/Montreal.png" alt="Montreal" width="30%" style="border: 2px solid black;">
+</p>
+
+<p align="center">
+  <img src="p2images/Montreal.png" alt="Nugburbing" width="100%" style="border: 2px solid black;">
+  &nbsp;&nbsp;&nbsp;
 </p>
 
 # 3. THE PROCESS
@@ -66,18 +73,26 @@ Using the provided code for image filtering, I created a square simulating the r
 
 After several modifications, I managed to achieve the following result:
 
-![REGION](p2images/region.png)
+<p align="center">
+  <img src="p2images/region.png" alt="Nugburbing" width="100%" style="border: 2px solid black;">
+  &nbsp;&nbsp;&nbsp;
+</p>
 
 However, once I reached this point, I wasn’t sure how to proceed or how to use this information effectively. This led me to rethink and restructure the entire approach, shifting my focus towards extracting relevant data from the filtered region and using it to calculate the car’s positional error. This restructuring allowed me to develop a more robust system for tracking the line, enabling smoother movement for the car. Eventually, I managed to filter the entire image and realized that focusing on a single pixel in the region of interest was the most efficient approach. This pixel would serve as the reference point for calculating the error between the car’s position and the red line, which significantly simplified the processing and improved the responsiveness of the control algorithm.
 
-![FINAL FILTER](p2images/final.png)
+<p align="center">
+  <img src="p2images/final.png" alt="Nugburbing" width="100%" style="border: 2px solid black;">
+  &nbsp;&nbsp;&nbsp;
+</p>
 
 - PID Control Implementation
 
 For the PID control, I conducted extensive testing with various gain values to optimize the performance of the control algorithm. I recorded my findings in a table to compare the results effectively. Below is an image displaying some of the tested values for the different gains.This table helped me visualize the impact of different proportional, integral, and derivative gains on the car's responsiveness and stability while following the line. By analyzing these results, I was able to make informed adjustments to the PID parameters to enhance the car's performance on the track.
 
-![PIDS VALUES](p2images/pid.png)
-
+<p align="center">
+  <img src="p2images/pid.png" alt="Nugburbing" width="100%" style="border: 2px solid black;">
+  &nbsp;&nbsp;&nbsp;
+</p>
 
 # 4. DIFICULTIES
 
