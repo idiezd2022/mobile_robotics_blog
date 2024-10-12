@@ -3,6 +3,11 @@
  Irene Diez de Toro
  
  October 2024 - Third Year of Robotic Software Robotics Engineering
+ 
+<div style="background-color: lightblue; padding: 10px;">
+ Este texto tiene un fondo azul claro.
+</div>
+
 
 
 # 0. INTRODUCTION
