@@ -17,9 +17,7 @@ The first task of the assignment is to detect the line to be followed. This can 
 
 CONTROL SYSTEM
 
-A system of devices or set of devices, that manages, commands, directs or regulates the behavior of other devices or systems to achieve the desired results. Simply speaking, a system which controls other systems. Control Systems help a robot to execute a set of commands precisely, in the presence of unforeseen errors.
-
-Types of Control System
+A system of devices or set of devices, that manages, commands, directs or regulates the behavior of other devices or systems to achieve the desired results. Simply speaking, a system which controls other systems. Control Systems help a robot to execute a set of commands precisely, in the presence of unforeseen errors. Types of Control System:
 
  - Open Loop Control System: A control system in which the control action is completely independent of the output of the system. A manual control system is on Open Loop System.
  - Closed Loop Control System: A control system in which the output has an effect on the input quantity in such a manner that the input will adjust itself based on the output generated. An open loop system can be converted to a closed one by providing feedback.
