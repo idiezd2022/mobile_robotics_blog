@@ -1,3 +1,5 @@
+<body style="background-color: #4B0082;">
+
 # mobile_robotics_blog
 
 Hi! 
@@ -10,3 +12,5 @@ My projects are here:
 
 ----------------
 ![DECORACION](encabezado.jpg)
+
+</body>
