@@ -29,6 +29,25 @@ A system of devices or set of devices, that manages, commands, directs or regula
 
 # 2. MY ALGORITHM
 
+My algorithm consists of filtering the image and following the line as quickly as possible. Specifically, from the image provided by the camera, I filter it using the HSV color space. Once filtered, I use a mask that focuses solely on the red line. Then, I identify the center of the red line I am following, using moment functions to obtain the corresponding coordinates.
+
+From this point, I calculate the error based on the position of the center of the line relative to the center of the image, which represents the target that the car must follow. This error is defined as the difference between these two positions. If the car deviates to one side, the error value will be positive or negative, depending on the direction of the deviation.
+
+With the calculated error, the algorithm determines the linear and angular velocities of the car, using PID controllers to adjust these values:
+- Linear Velocity: This is set based on the error. If the error is small, the car moves at a constant speed.
+- Angular Velocity: If the error is significant (i.e., if the car is far from the center of the line), the PID controller adjusts the angular velocity to turn the car in the right direction and align it with the line.
+
+In the event that the red line is not detected (for example, if the car strays too far from the line), the algorithm adjusts its behavior. It stops the linear velocity and continues with angular control based on the last known error, attempting to recover the line by turning in the direction the car believes it should be heading.
+
+Lastly, I will present images showing how long my algorithm takes on various maps, as the time taken for the simpler map can be seen in the video provided at the end of the page.
+
+<p align="center">
+  <img src="p2images/Nugburbing.png" alt="Nugburbing" width="30%" style="border: 2px solid black;">
+  &nbsp;&nbsp;&nbsp;
+  <img src="p2images/Montmelo.png" alt="Montmelo" width="30%" style="border: 2px solid black;">
+  &nbsp;&nbsp;&nbsp;
+  <img src="p2images/Montreal.png" alt="Montreal" width="30%" style="border: 2px solid black;">
+</p>
 
 # 3. THE PROCESS
 
@@ -38,11 +57,11 @@ The first steps involved filtering the image and focusing on the specified pixel
 Using the provided code for image filtering, I created a square simulating the region I wanted to focus on, while also experimenting with different colors using the color filter. To ensure accurate detection, I iterated over the rows and columns of pixels within the defined region, analyzing each pixel to determine if it matched the target color range. This process helped me refine the filter by adjusting the color thresholds until I could reliably detect the red line, which was crucial for ensuring that the car would follow the correct path.
 
 <p align="center">
-  <img src="p2images/redd.png" alt="Before" width="30%" style="border: 2px solid black;">
+  <img src="p2images/redd.png" alt="Red" width="30%" style="border: 2px solid black;">
   &nbsp;&nbsp;&nbsp;
-  <img src="p2images/blue.png" alt="During" width="30%" style="border: 2px solid black;">
+  <img src="p2images/blue.png" alt="Blue" width="30%" style="border: 2px solid black;">
   &nbsp;&nbsp;&nbsp;
-  <img src="p2images/green.png" alt="After" width="30%" style="border: 2px solid black;">
+  <img src="p2images/green.png" alt="Green" width="30%" style="border: 2px solid black;">
 </p>
 
 After several modifications, I managed to achieve the following result:
