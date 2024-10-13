@@ -58,6 +58,7 @@ Lastly, I will present images showing how long my algorithm takes on various map
 # 3. THE PROCESS
 
 - ***Image filter***
+
 The first steps involved filtering the image and focusing on the specified pixel. Below are images showing the progression:
 
 Using the provided code for image filtering, I created a square simulating the region I wanted to focus on, while also experimenting with different colors using the color filter. To ensure accurate detection, I iterated over the rows and columns of pixels within the defined region, analyzing each pixel to determine if it matched the target color range. This process helped me refine the filter by adjusting the color thresholds until I could reliably detect the red line, which was crucial for ensuring that the car would follow the correct path.
