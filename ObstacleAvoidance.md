@@ -9,7 +9,7 @@
 
 For this third assignment of the course, a local navigation algorithm based on the ***"Virtual Force Field" (VFF)*** has been programmed for a Formula 1 car that moves around the track, avoiding any obstacles along the way. To detect obstacles and the boundaries of the track, the car is equipped with a **laser sensor** at the front. Additionally, there are several *waypoints* assigned on the track, which serve as *targets* that the car passes through until it reaches the finish line. These targets are used to generate an **attractive force vector** that guides the car towards each goal until it completes the lap. In this case, we were also asked, as a complementary but not primary task, to make the car as fast as possible, avoiding slow movement.
 
-**NOTE THAT:** In almost all the photos shown in this documentation, there is a problem with the colors. This is because, in class, the order of the vectors was unintentionally explained incorrectly when placing the function to represent the vectors. the only photo with the correct colors is the one shown in the description of my algorithm.
+**NOTE THAT:** In almost all the photos shown in this documentation, there is a problem with the colors. This is because, in class, the order of the vectors was unintentionally explained incorrectly when placing the function to represent the vectors. The only photo with the correct colors is the one shown in the description of my algorithm.
 
 
 # 1. THEORICAL CONCEPTS
@@ -69,22 +69,29 @@ The **Virtual Force Field Algorithm** works in the following steps:
 
 
 # 3. THE PROCESS
+
+During the creation of the program, I went through several important steps. First, I developed the attraction vector. In this case, I didn't take long to implement it, as it only involved transferring the coordinates of the car and the target. However, without realizing it, this implementation wasn't entirely correct and would cause problems later on, as can be seen in the first image.
+
 <p align="center">
-  <img src="p3images/gettarget.png" alt="Nugburbing" width="70%" style="border: 2px solid black;">
+  <img src="p3images/gettarget.png" alt="Getting target vector" width="70%" style="border: 2px solid black;">
   &nbsp;&nbsp;&nbsp;
 </p>
 
+The second step was to create the repulsion vector using the values from the laser. At this point, I made numerous modifications due to calculation errors, which are detailed later in the difficulties section. Finally, I calculated the resulting vector. This last step did not present me with significant difficulties, as I only needed to adjust the coefficient values in the sum a couple of times until I found the correct ones.
+
+However, as shown in the image and described in the process of creating the repulsion vector, in the first functional version I developed, I could only detect obstacles that were very close. This meant that when there were no visible obstacles, the resulting vector appeared incorrectly. Once I made the necessary changes, I was able to adjust the car's speed (initially, I considered deriving it from the resulting vector, but that wasn't viable) and the direction, which is based on the angle of that vector.
+
 <p align="center">
-  <img src="p3images/getingtargetresultant.png" alt="Nugburbing" width="100%" style="border: 2px solid black;">
+  <img src="p3images/getingtargetresultant.png" alt="Target and resultant" width="100%" style="border: 2px solid black;">
   &nbsp;&nbsp;&nbsp;
 </p>
 
+In the last image, you can see that I was practically close to solving the problem. As observed, the repulsion vector was well-scaled, but the attraction vector was too long, giving it too much influence on the resulting vector. This caused the movement to be uncontrolled and the robot not to avoid obstacles properly. Ultimately, I understood that I also needed to limit the attraction vector to balance both vectors and make the algorithm work correctly.
+
 <p align="center">
-  <img src="p3images/nearsolution.png" alt="Nugburbing" width="100%" style="border: 2px solid black;">
+  <img src="p3images/nearsolution.png" alt="Near solution" width="100%" style="border: 2px solid black;">
   &nbsp;&nbsp;&nbsp;
 </p>
-
-
 
 
 # 4. DIFICULTIES
