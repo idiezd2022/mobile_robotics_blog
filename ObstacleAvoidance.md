@@ -87,9 +87,9 @@ The **Virtual Force Field Algorithm** works in the following steps:
 # 4. DIFICULTIES
 
 <p align="center">
-  <img src="p3images/ badvectors.png" alt="First fail vector" width="45%" style="border: 2px solid black;">
+ <img src="p3images/badvectors2.png" alt="Second fail vector" width="30%" style="border: 2px solid black;">
   &nbsp;&nbsp;&nbsp;
-  <img src="p3images/badvectors2.png" alt="Second fail vector" width="30%" style="border: 2px solid black;">
+  <img src="p3images/ badvectors.png" alt="First fail vector" width="45%" style="border: 2px solid black;">
   &nbsp;&nbsp;&nbsp;
 </p>
 
