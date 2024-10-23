@@ -86,6 +86,16 @@ The **Virtual Force Field Algorithm** works in the following steps:
 
 # 4. DIFICULTIES
 
+During the development of this project, I faced several challenges that affected the progress and implementation of the car’s navegation algorithm.
+
+The biggest problem I faced was obtaining and generating the repulsive vector, which is derived from the laser sensor data. At first, I struggled a lot to understand the concept related to the laser theory, as I didn’t have the opportunity to work with it in the first exercise, and last year, when we covered it in another subject, I didn’t fully grasp it.
+
+After several days of analyzing it and with the help of the code I already had, I managed to create an initial vector. In that case, I took the laser values, calculated the corresponding components, and summed them. I noticed that it was necessary to invert the values since the force needed to push in the opposite direction. This process took me quite a bit of time before I got it to work correctly.
+
+When the vector began to work relatively well, obstacles were successfully avoided, except in the case of distant targets, where the robot would get stuck to a wall and wouldn’t move away. After hearing a classmate’s question and the professor's response, I realized that my calculation was incorrect. What I actually needed to do was calculate the inverse and the average of the distances, so that all the distances were taken into account, but with the closest ones having the most influence.
+
+After a few adjustments, I managed to solve the issue and optimize the calculation. Below are two images of the vectors I had initially generated:
+
 <p align="center">
  <img src="p3images/badvectors2.png" alt="Second fail vector" width="30%" style="border: 2px solid black;">
   &nbsp;&nbsp;&nbsp;
