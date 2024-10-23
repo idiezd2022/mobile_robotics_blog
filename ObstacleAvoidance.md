@@ -60,7 +60,7 @@ The **Virtual Force Field Algorithm** works in the following steps:
 - **Direction Vector**: To obtain the direction vector we should add the target vector and the obstacle vector. But, due to an inherent problem behind the calculation of the obstacle vector, we cannot simply add them to obtain the resultant. We are required to keep moving forward for the purpose of this exercise. Hence, the component of the direction vector in the direction of motion of the car, has no effect on the motion of the car. Therefore, we can simply leave it as a constant, while adjusting the vector responsible for the steering of the car. It is the steering, that will in fact, provide us with the obstacle avoidance capabilities. Hence, the steering is going to be controlled by the Direction Vector.
 
 # 2. MY ALGORITHM
-My algorithm is designed to control the movement of a robot using an approach based on attractive and repulsive forces. I initialize two parameters, ALPHA and BETA, which weigh the influence of each force on the robot's movement. Then, I calculate a repulsive vector based on the laser sensor readings, where the repulsion is stronger as obstacles get closer. I also convert the target coordinates into the robot's local reference frame and limit the magnitude of the vectors to avoid abrupt movements. In a main loop, I obtain the robot's current position and the target coordinates, calculate the distance between them, and compute the attractive and repulsive forces. If the robot is close to the target, I mark it as reached; otherwise, I calculate a resultant force vector and use it to direct the robot's movement. Additionally, I display the forces on the graphical interface to monitor the robot's behavior. The image shows the final vectors during the program.
+My algorithm is designed to control the movement of a robot using an approach based on *attractive* and *repulsive forces*. I initialize two parameters, **ALPHA** and **BETA**, which weigh the influence of each force on the robot's movement. Then, I calculate a repulsive vector based on the laser sensor readings, where the repulsion is stronger as obstacles get closer. I also convert the target coordinates into the robot's local reference frame and limit the magnitude of the vectors to avoid abrupt movements. In a main loop, I obtain the robot's current position and the target coordinates, calculate the distance between them, and compute the attractive and repulsive forces. If the robot is close to the target, I mark it as reached; otherwise, I calculate a *resultant force vector* and use it to direct the robot's movement. Additionally, I display the forces on the graphical interface to monitor the robot's behavior. The image shows the final vectors during the program.
 
 <p align="center">
   <img src="p3images/finalvectors.png" alt="Final vectors" width="70%" style="border: 2px solid black;">
@@ -70,14 +70,14 @@ My algorithm is designed to control the movement of a robot using an approach ba
 
 # 3. THE PROCESS
 
-During the creation of the program, I went through several important steps. First, I developed the attraction vector. In this case, I didn't take long to implement it, as it only involved transferring the coordinates of the car and the target. However, without realizing it, this implementation wasn't entirely correct and would cause problems later on, as can be seen in the first image.
+During the creation of the program, I went through several important steps. First, I developed the *attraction vector*. In this case, I didn't take long to implement it, as it only involved transferring the coordinates of the car and the target. However, without realizing it, this implementation wasn't entirely correct and would cause problems later on, as can be seen in the first image.
 
 <p align="center">
   <img src="p3images/gettarget.png" alt="Getting target vector" width="70%" style="border: 2px solid black;">
   &nbsp;&nbsp;&nbsp;
 </p>
 
-The second step was to create the repulsion vector using the values from the laser. At this point, I made numerous modifications due to calculation errors, which are detailed later in the difficulties section. Finally, I calculated the resulting vector. This last step did not present me with significant difficulties, as I only needed to adjust the coefficient values in the sum a couple of times until I found the correct ones.
+The second step was to create the *repulsion vector* using the values from the laser. At this point, I made numerous modifications due to calculation errors, which are detailed later in the difficulties section. Finally, I calculated the *resulting vector*. This last step did not present me with significant difficulties, as I only needed to adjust the coefficient values in the sum a couple of times until I found the correct ones.
 
 However, as shown in the image and described in the process of creating the repulsion vector, in the first functional version I developed, I could only detect obstacles that were very close. This meant that when there were no visible obstacles, the resulting vector appeared incorrectly. Once I made the necessary changes, I was able to adjust the car's speed (initially, I considered deriving it from the resulting vector, but that wasn't viable) and the direction, which is based on the angle of that vector.
 
@@ -98,11 +98,11 @@ In the last image, you can see that I was practically close to solving the probl
 
 During the development of this project, I faced several challenges that affected the progress and implementation of the car’s navegation algorithm.
 
-The biggest problem I faced was obtaining and generating the repulsive vector, which is derived from the laser sensor data. At first, I struggled a lot to understand the concept related to the laser theory, as I didn’t have the opportunity to work with it in the first exercise, and last year, when we covered it in another subject, I didn’t fully grasp it.
+The biggest problem I faced was obtaining and generating the **repulsive vector**, which is derived from the laser sensor data. At first, I struggled a lot to understand the concept related to the laser theory, as I didn’t have the opportunity to work with it in the first exercise, and last year, when we covered it in another subject, I didn’t fully grasp it.
 
 After several days of analyzing it and with the help of the code I already had, I managed to create an initial vector. In that case, I took the laser values, calculated the corresponding components, and summed them. I noticed that it was necessary to invert the values since the force needed to push in the opposite direction. This process took me quite a bit of time before I got it to work correctly.
 
-When the vector began to work relatively well, obstacles were successfully avoided, except in the case of distant targets, where the robot would get stuck to a wall and wouldn’t move away. After hearing a classmate’s question and the professor's response, I realized that my calculation was incorrect. What I actually needed to do was calculate the inverse and the average of the distances, so that all the distances were taken into account, but with the closest ones having the most influence.
+When the vector began to work relatively well, obstacles were successfully avoided, except in the case of distant targets, where the robot would get stuck to a wall and wouldn’t move away. After hearing a classmate’s question and the professor's response, I realized that my calculation was incorrect. What I actually needed to do was calculate the *inverse* and the *average* of the distances, so that all the distances were taken into account, but with the closest ones having the most influence.
 
 After a few adjustments, I managed to solve the issue and optimize the calculation. Below are two images of the vectors I had initially generated:
 
