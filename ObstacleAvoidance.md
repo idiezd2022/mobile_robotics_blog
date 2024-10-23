@@ -60,23 +60,39 @@ The **Virtual Force Field Algorithm** works in the following steps:
 
 
 <p align="center">
-  <img src="p3images/finalvectors.png" alt="Final vectors" width="100%" style="border: 2px solid black;">
+  <img src="p3images/finalvectors.png" alt="Final vectors" width="70%" style="border: 2px solid black;">
   &nbsp;&nbsp;&nbsp;
 </p>
 
 
 # 3. THE PROCESS
-
+<p align="center">
+  <img src="p3images/gettarget.png" alt="Nugburbing" width="70%" style="border: 2px solid black;">
+  &nbsp;&nbsp;&nbsp;
+</p>
 
 <p align="center">
-  <img src="p3images/badvectors.png" alt="First fail vector" width="30%" style="border: 2px solid black;">
+  <img src="p3images/getingtargetresultant.png" alt="Nugburbing" width="100%" style="border: 2px solid black;">
+  &nbsp;&nbsp;&nbsp;
+</p>
+
+<p align="center">
+  <img src="p3images/nearsolution.png" alt="Nugburbing" width="100%" style="border: 2px solid black;">
+  &nbsp;&nbsp;&nbsp;
+</p>
+
+
+
+
+# 4. DIFICULTIES
+
+<p align="center">
+  <img src="p3images/ badvectors.png" alt="First fail vector" width="45%" style="border: 2px solid black;">
   &nbsp;&nbsp;&nbsp;
   <img src="p3images/badvectors2.png" alt="Second fail vector" width="30%" style="border: 2px solid black;">
   &nbsp;&nbsp;&nbsp;
 </p>
 
-
-# 4. DIFICULTIES
 
 # 5. VIDEO OF THE ALGORITHM
 
