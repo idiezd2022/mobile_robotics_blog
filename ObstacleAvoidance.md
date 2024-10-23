@@ -9,6 +9,8 @@
 
 For this third assignment of the course, a local navigation algorithm based on the ***"Virtual Force Field" (VFF)*** has been programmed for a Formula 1 car that moves around the track, avoiding any obstacles along the way. To detect obstacles and the boundaries of the track, the car is equipped with a **laser sensor** at the front. Additionally, there are several *waypoints* assigned on the track, which serve as *targets* that the car passes through until it reaches the finish line. These targets are used to generate an **attractive force vector** that guides the car towards each goal until it completes the lap. In this case, we were also asked, as a complementary but not primary task, to make the car as fast as possible, avoiding slow movement.
 
+**NOTE THAT:** IN ALMOST ALL THE PHOTOS SHOWN IN THIS DOCUMENTATION, THERE IS A PROBLEM WITH THE VECTOR COLORS. THIS IS BECAUSE, IN CLASS, THE ORDER OF THE VECTORS WAS UNINTENTIONALLY EXPLAINED INCORRECTLY WHEN PLACING THE FUNCTION TO REPRESENT THE VECTORS. THE ONLY PHOTO WITH THE CORRECT COLORS IS THE ONE SHOWN IN THE DESCRIPTION OF MY ALGORITHM.
+
 # 1. THEORICAL CONCEPTS
 
 This exercise requires us to implement a local navigation algorithm called the **Virtual Force Field Algorithm**. Below is the complete theory regarding this algorithm.
