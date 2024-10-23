@@ -82,14 +82,14 @@ The second step was to create the repulsion vector using the values from the las
 However, as shown in the image and described in the process of creating the repulsion vector, in the first functional version I developed, I could only detect obstacles that were very close. This meant that when there were no visible obstacles, the resulting vector appeared incorrectly. Once I made the necessary changes, I was able to adjust the car's speed (initially, I considered deriving it from the resulting vector, but that wasn't viable) and the direction, which is based on the angle of that vector.
 
 <p align="center">
-  <img src="p3images/getingtargetresultant.png" alt="Target and resultant" width="100%" style="border: 2px solid black;">
+  <img src="p3images/getingtargetresultant.png" alt="Target and resultant" width="70%" style="border: 2px solid black;">
   &nbsp;&nbsp;&nbsp;
 </p>
 
 In the last image, you can see that I was practically close to solving the problem. As observed, the repulsion vector was well-scaled, but the attraction vector was too long, giving it too much influence on the resulting vector. This caused the movement to be uncontrolled and the robot not to avoid obstacles properly. Ultimately, I understood that I also needed to limit the attraction vector to balance both vectors and make the algorithm work correctly.
 
 <p align="center">
-  <img src="p3images/nearsolution.png" alt="Near solution" width="100%" style="border: 2px solid black;">
+  <img src="p3images/nearsolution.png" alt="Near solution" width="70%" style="border: 2px solid black;">
   &nbsp;&nbsp;&nbsp;
 </p>
 
