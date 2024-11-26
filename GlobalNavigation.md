@@ -1,4 +1,5 @@
 
+
  # PRACTICE 4: DOCUMENTATION OF GLOBAL NAVIGATION
 
  Irene Diez de Toro
@@ -14,7 +15,29 @@ For this third assignment of the course, a local navigation algorithm based on t
 
 # 1. THEORICAL CONCEPTS
 
-This exercise requires us to implement a local navigation algorithm called the **Virtual Force Field Algorithm**. Below is the complete theory regarding this algorithm.
+This exercise requires us to implement a global (and local) navigation using Motion Planning. Below is the complete theory that explains how to do it.
+
+Motion Planning is a term used in robotics to find a sequence of valid configurations that moves the robot from source to destination. Motion Planning algorithms find themselves in a variety of settings, be it industrial manipulators, mobile robots, artificial intelligence, animations or study of biological molecules. There are mainly 2 methods to solve the exercise, Gradient Path Planning and Sampling Based Path Planning:
+
+**GRADIENT PATH PLANNING**
+
+One such method for Motion Planning is Gradient Path Planning. GPP works on the principle of potential fields. The obstacles in the path serve as potential wall to the path planner, and the target serve as potential well. By combining all the potential walls and wells, a path is constructed as a downward slope. The robot follows that path to reach it’s destination. Gradient Path Planning can be implemented using Brushfire Algorithm or Wave Front Algorithm. Next section explains the working of Wave Front Algorithm.
+
+- ***Wave Front Algorithm***: is BFS based approach to build a path from source to destination. The algorithm works by assigning weights to a grid of cells. Given the source and target, the algorithm starts from the target node and moves outwards like a ripple, while progressively assigning weights to the neighboring cells.
+
+- ***Assigning Weights***: As for obstacles, additional weights are added to the cells that are close to obstacles. Intuitively, the weights represent the superposition of waves that are reflected from the walls of obstacles.
+
+- ***Superposition of Waves***: The algorithm stops upon reaching the source. To navigate through the generated path, the robot follows the path indicated by decreasing weights (a downhill drive). A grayscale image representation quite clearly depicts the path the robot might follow!
+
+**SAMPLING BASED PATH PLANNING**
+
+Sampling based Path Planning employs sampling of the state space of the robot in order to quickly and effectively plan paths, even with differential constraints or those with many degrees of freedom. Some of the algorithms under this class are:
+
+- ***Probabilistic Roadmap***: These methods work by randomly sampling points in the workspace. Once the desired number of samples are obtained, the roadmap is constructed by connecting the random samples to form edges. On the resulting graph formed, any shortest path algorithm (A*, Dijkstra, BFS) is applied to get our resulting path.
+ 
+- ***Tree Based Planner***: Tree Based Planners are very similar to Probabilistic Roadmaps, except for the fact that there are no cycles involved in tree based planners. There are a variety of tree based planners, like RRT, EST, SBL and KPIECE. These algorithms work heuristically, working from the root node, a tree (a graph without cycles) is constructed.
+
+
 
 **NAVIGATION**
 
