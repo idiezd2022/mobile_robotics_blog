@@ -1,5 +1,4 @@
 
-
  # PRACTICE 4: DOCUMENTATION OF GLOBAL NAVIGATION
 
  Irene Diez de Toro
@@ -38,7 +37,6 @@ Sampling based Path Planning employs sampling of the state space of the robot in
 - ***Tree Based Planner***: Tree Based Planners are very similar to Probabilistic Roadmaps, except for the fact that there are no cycles involved in tree based planners. There are a variety of tree based planners, like RRT, EST, SBL and KPIECE. These algorithms work heuristically, working from the root node, a tree (a graph without cycles) is constructed.
 
 
-
 **NAVIGATION**
 
 **Robot Navigation** involves all the related tasks and algorithms required to take a robot from point A to point B autonomously without making any collisions. It is a well-studied topic in Mobile Robotics, comprising volumes of books! The problem of navigation is broken down into the following subproblems:
@@ -67,20 +65,6 @@ Global Navigation involves the use of a map of the environment to plan a path fr
 **LOCAL NAVIGATION**
 
 Once the global path is decided, it is broken down into suitable waypoints. The robot navigates through these waypoints to reach its destination. Local Navigation involves a dynamically changing path plan, taking into consideration the changing surroundings and vehicle constraints. Some examples of such algorithms would be **Virtual Force Field**, **Follow Wall**, **Pledge Algorithm**, etc.
-
-**VIRTUAL FORCE FIELD ALGORITHM**
-
-The **Virtual Force Field Algorithm** works in the following steps:
-
-1. The robot assigns an **attractive vector** to the waypoint that points towards the waypoint.
-2. The robot assigns a **repulsive vector** to the obstacle according to its sensor readings that points away from the waypoint. This is done by summing all the vectors that are translated from the sensor readings.
-3. The robot follows the vector obtained by summing the target and obstacle vectors.
-
-**DETERMINING THE VECTORS**
-
-- **Target Vector**: The target vector can be easily obtained by subtracting the position of the car from the position of the next waypoint. In order to implement this on the GUI interface of the exercise, in addition to the vector obtained by subtracting, we need to apply a rotation to the vector as well. The purpose of rotation is to keep the target vector always in the direction of the waypoint and not in front of the car.
-- **Obstacle Vector**: The obstacle vector is to be calculated from the sensor readings we obtain from the surroundings of the robot. Each obstacle in front of the car, is going to provide a repulsive vector, which we will add to obtain the resultant repulsive vector. Assign a repulsive vector, for each of the 180 sensor readings. The magnitude of the repulsive vector is inversely proportional to the magnitude of the sensor reading. Once, all the repulsive vectors are obtained they are all added, to get the resultant.
-- **Direction Vector**: To obtain the direction vector we should add the target vector and the obstacle vector. But, due to an inherent problem behind the calculation of the obstacle vector, we cannot simply add them to obtain the resultant. We are required to keep moving forward for the purpose of this exercise. Hence, the component of the direction vector in the direction of motion of the car, has no effect on the motion of the car. Therefore, we can simply leave it as a constant, while adjusting the vector responsible for the steering of the car. It is the steering, that will in fact, provide us with the obstacle avoidance capabilities. Hence, the steering is going to be controlled by the Direction Vector.
 
 # 2. MY ALGORITHM
 My algorithm is designed to control the movement of a robot using an approach based on *attractive* and *repulsive forces*. I initialize two parameters, **ALPHA** and **BETA**, which weigh the influence of each force on the robot's movement. Then, I calculate a repulsive vector based on the laser sensor readings, where the repulsion is stronger as obstacles get closer. I also convert the target coordinates into the robot's local reference frame and limit the magnitude of the vectors to avoid abrupt movements. In a main loop, I obtain the robot's current position and the target coordinates, calculate the distance between them, and compute the attractive and repulsive forces. If the robot is close to the target, I mark it as reached; otherwise, I calculate a *resultant force vector* and use it to direct the robot's movement. Additionally, I display the forces on the graphical interface to monitor the robot's behavior. The image shows the final vectors during the program.
