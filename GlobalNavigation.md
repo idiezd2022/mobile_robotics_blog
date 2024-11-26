@@ -16,6 +16,27 @@ For this third assignment of the course, a local navigation algorithm based on t
 
 This exercise requires us to implement a global (and local) navigation using Motion Planning. Below is the complete theory that explains how to do it.
 
+**Robot Navigation** involves all the related tasks and algorithms required to take a robot from point A to point B autonomously without making any collisions. It is a well-studied topic in Mobile Robotics, comprising volumes of books! The problem of navigation is broken down into the following subproblems:
+
+- **Localisation**: The robot needs to know where it is.
+- **Collision Avoidance**: The robot needs to detect and avoid obstacles.
+- **Mapping**: The robot needs to remember its surroundings.
+- **Planning**: The robot needs to be able to plan a route to point B.
+- **Explore**: The robot needs to be able to explore new terrain.
+
+**ROBOT NAVIGATION PROBLEMS**
+
+Some of the ways to achieve the task of navigation are as follows:
+
+- **Vision-Based**: Computer Vision algorithms and optical sensors, like LIDAR sensors, are used for Vision-Based Navigation.
+- **Inertial Navigation**: Airborne robots use inertial sensors for Navigation.
+- **Acoustic Navigation**: Underwater robots use SONAR-based Navigation Systems.
+- **Radio Navigation**: Navigation using RADAR technology.
+
+The problem of **Path Planning** in navigation is dealt with in two ways: **Global Navigation** and **Local Navigation**.
+
+**--GLOBAL NAVIGATION--**
+
 Motion Planning is a term used in robotics to find a sequence of valid configurations that moves the robot from source to destination. Motion Planning algorithms find themselves in a variety of settings, be it industrial manipulators, mobile robots, artificial intelligence, animations or study of biological molecules. There are mainly 2 methods to solve the exercise, Gradient Path Planning and Sampling Based Path Planning:
 
 **GRADIENT PATH PLANNING**
@@ -37,32 +58,7 @@ Sampling based Path Planning employs sampling of the state space of the robot in
 - ***Tree Based Planner***: Tree Based Planners are very similar to Probabilistic Roadmaps, except for the fact that there are no cycles involved in tree based planners. There are a variety of tree based planners, like RRT, EST, SBL and KPIECE. These algorithms work heuristically, working from the root node, a tree (a graph without cycles) is constructed.
 
 
-**NAVIGATION**
-
-**Robot Navigation** involves all the related tasks and algorithms required to take a robot from point A to point B autonomously without making any collisions. It is a well-studied topic in Mobile Robotics, comprising volumes of books! The problem of navigation is broken down into the following subproblems:
-
-- **Localisation**: The robot needs to know where it is.
-- **Collision Avoidance**: The robot needs to detect and avoid obstacles.
-- **Mapping**: The robot needs to remember its surroundings.
-- **Planning**: The robot needs to be able to plan a route to point B.
-- **Explore**: The robot needs to be able to explore new terrain.
-
-**ROBOT NAVIGATION PROBLEMS**
-
-Some of the ways to achieve the task of navigation are as follows:
-
-- **Vision-Based**: Computer Vision algorithms and optical sensors, like LIDAR sensors, are used for Vision-Based Navigation.
-- **Inertial Navigation**: Airborne robots use inertial sensors for Navigation.
-- **Acoustic Navigation**: Underwater robots use SONAR-based Navigation Systems.
-- **Radio Navigation**: Navigation using RADAR technology.
-
-The problem of **Path Planning** in navigation is dealt with in two ways: **Global Navigation** and **Local Navigation**.
-
-**GLOBAL NAVIGATION**
-
-Global Navigation involves the use of a map of the environment to plan a path from point A to point B. The optimality of the path is based on the length of the path, the time taken to reach the target, using permanent roads, etc. Global Positioning System (GPS) is one example of Global Navigation. The algorithms used in such systems may include Dijkstra, Best First, or A*, etc.
-
-**LOCAL NAVIGATION**
+**--LOCAL NAVIGATION--**
 
 Once the global path is decided, it is broken down into suitable waypoints. The robot navigates through these waypoints to reach its destination. Local Navigation involves a dynamically changing path plan, taking into consideration the changing surroundings and vehicle constraints. Some examples of such algorithms would be **Virtual Force Field**, **Follow Wall**, **Pledge Algorithm**, etc.
 
