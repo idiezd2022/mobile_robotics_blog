@@ -74,16 +74,14 @@ The system operates in a continuous loop. First, it detects changes in the targe
 
 # 3. THE PROCESS
 
-During the creation of the program, I went through several important steps. First, I developed the *attraction vector*. In this case, I didn't take long to implement it, as it only involved transferring the coordinates of the car and the target. However, without realizing it, this implementation wasn't entirely correct and would cause problems later on, as can be seen in the first image.
+During the creation of the program, I went through several important steps. First, to implement the map, it was necessary to develop the algorithm described in the theory of node expansion, Breadth-First Search (BFS). This step was not very difficult, as I had previously implemented this same algorithm in another course. Thanks to that prior experience, designing the main pseudocode was relatively straightforward. Next, I implemented a function to generate the child nodes from the current position, considering the possible movements both in a straight line and diagonally. During this process, I included the assignment of costs to each movement, distinguishing between diagonal and straight moves to accurately reflect the distance traveled. Finally, I integrated functionality to represent the progress made toward the target on the map, allowing real-time visualization of the algorithm's advancement. Below is an image illustrating this step of the process.
 
 <p align="center">
   <img src="p4images/1.png" alt="Getting cost grid" width="70%" style="border: 2px solid black;">
   &nbsp;&nbsp;&nbsp;
 </p>
 
-The second step was to create the *repulsion vector* using the values from the laser. At this point, I made numerous modifications due to calculation errors, which are detailed later in the difficulties section. Finally, I calculated the *resulting vector*. This last step did not present me with significant difficulties, as I only needed to adjust the coefficient values in the sum a couple of times until I found the correct ones.
-
-However, as shown in the image and described in the process of creating the repulsion vector, in the first functional version I developed, I could only detect obstacles that were very close. This meant that when there were no visible obstacles, the resulting vector appeared incorrectly. Once I made the necessary changes, I was able to adjust the car's speed (initially, I considered deriving it from the resulting vector, but that wasn't viable) and the direction, which is based on the angle of that vector.
+In the following image, this same algorithm is shown with different targets.
 
 <p align="center">
   <img src="p4images/firststeps2.png" alt="Target and resultant" width="70%" style="border: 2px solid black;">
