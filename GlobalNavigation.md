@@ -66,7 +66,7 @@ Once the global path is decided, it is broken down into suitable waypoints. The 
 My algorithm is designed to control the movement of a robot using an approach based on *attractive* and *repulsive forces*. I initialize two parameters, **ALPHA** and **BETA**, which weigh the influence of each force on the robot's movement. Then, I calculate a repulsive vector based on the laser sensor readings, where the repulsion is stronger as obstacles get closer. I also convert the target coordinates into the robot's local reference frame and limit the magnitude of the vectors to avoid abrupt movements. In a main loop, I obtain the robot's current position and the target coordinates, calculate the distance between them, and compute the attractive and repulsive forces. If the robot is close to the target, I mark it as reached; otherwise, I calculate a *resultant force vector* and use it to direct the robot's movement. Additionally, I display the forces on the graphical interface to monitor the robot's behavior. The image shows the final vectors during the program.
 
 <p align="center">
-  <img src="p3images/finalvectors.png" alt="Final vectors" width="70%" style="border: 2px solid black;">
+  <img src="p4images/firstfinal3.png" alt="Final algorithm" width="70%" style="border: 2px solid black;">
   &nbsp;&nbsp;&nbsp;
 </p>
 
@@ -76,7 +76,7 @@ My algorithm is designed to control the movement of a robot using an approach ba
 During the creation of the program, I went through several important steps. First, I developed the *attraction vector*. In this case, I didn't take long to implement it, as it only involved transferring the coordinates of the car and the target. However, without realizing it, this implementation wasn't entirely correct and would cause problems later on, as can be seen in the first image.
 
 <p align="center">
-  <img src="p3images/gettarget.png" alt="Getting target vector" width="70%" style="border: 2px solid black;">
+  <img src="p4images/1.png" alt="Getting cost grid" width="70%" style="border: 2px solid black;">
   &nbsp;&nbsp;&nbsp;
 </p>
 
@@ -85,17 +85,26 @@ The second step was to create the *repulsion vector* using the values from the l
 However, as shown in the image and described in the process of creating the repulsion vector, in the first functional version I developed, I could only detect obstacles that were very close. This meant that when there were no visible obstacles, the resulting vector appeared incorrectly. Once I made the necessary changes, I was able to adjust the car's speed (initially, I considered deriving it from the resulting vector, but that wasn't viable) and the direction, which is based on the angle of that vector.
 
 <p align="center">
-  <img src="p3images/getingtargetresultant.png" alt="Target and resultant" width="70%" style="border: 2px solid black;">
+  <img src="p4images/firststeps2.png" alt="Target and resultant" width="70%" style="border: 2px solid black;">
   &nbsp;&nbsp;&nbsp;
 </p>
 
 In the last image, you can see that I was practically close to solving the problem. As observed, the repulsion vector was well-scaled, but the attraction vector was too long, giving it too much influence on the resulting vector. This caused the movement to be uncontrolled and the robot not to avoid obstacles properly. Ultimately, I understood that I also needed to limit the attraction vector to balance both vectors and make the algorithm work correctly.
 
 <p align="center">
-  <img src="p3images/nearsolution.png" alt="Near solution" width="70%" style="border: 2px solid black;">
+  <img src="p4images/firstversion.png" alt="First solution" width="70%" style="border: 2px solid black;">
   &nbsp;&nbsp;&nbsp;
 </p>
 
+<p align="center">
+  <img src="p4images/secondversion.png" alt="Second solution" width="70%" style="border: 2px solid black;">
+  &nbsp;&nbsp;&nbsp;
+</p>
+
+<p align="center">
+  <img src="p4images/apiece.png" alt="Final solution" width="70%" style="border: 2px solid black;">
+  &nbsp;&nbsp;&nbsp;
+</p>
 
 # 4. DIFICULTIES
 
@@ -110,9 +119,7 @@ When the vector began to work relatively well, obstacles were successfully avoid
 After a few adjustments, I managed to solve the issue and optimize the calculation. Below are two images of the vectors I had initially generated:
 
 <p align="center">
- <img src="p3images/badvectors2.png" alt="Second fail vector" width="30%" style="border: 2px solid black;">
-  &nbsp;&nbsp;&nbsp;
-  <img src="p3images/ badvectors.png" alt="First fail vector" width="45%" style="border: 2px solid black;">
+ <img src="p4images/finalmap.png" alt="Final map" width="30%" style="border: 2px solid black;">
   &nbsp;&nbsp;&nbsp;
 </p>
 
