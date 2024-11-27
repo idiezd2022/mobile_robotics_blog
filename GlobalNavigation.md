@@ -7,7 +7,7 @@
 
 # 0. INTRODUCTION
 
-For this fourth assignment of the course,
+For this fourth assignment of the course, the goal of this practice is to develop a Gradient Path Planning (GPP) algorithm that enables a robot to navigate autonomously toward a selected destination. The robot must follow the shortest path while avoiding obstacles, such as non-road areas, ensuring safe and efficient movement. The system includes components like the city view, a graphical interface, the algorithm model, and a gallery for route simulations. The practice includes challenges to enhance the system’s functionality, such as ensuring the robot reliably reaches its destination, optimizing the algorithm to compute the shortest path efficiently, and minimizing the time taken to arrive. These objectives encourage refining the navigation logic for improved performance and adaptability.
 
 a local navigation algorithm based on the ***"Virtual Force Field" (VFF)*** has been programmed for a Formula 1 car that moves around the track, avoiding any obstacles along the way. To detect obstacles and the boundaries of the track, the car is equipped with a **laser sensor** at the front. Additionally, there are several *waypoints* assigned on the track, which serve as *targets* that the car passes through until it reaches the finish line. These targets are used to generate an **attractive force vector** that guides the car towards each goal until it completes the lap. In this case, we were also asked, as a complementary but not primary task, to make the car as fast as possible, avoiding slow movement.
 
