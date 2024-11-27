@@ -88,8 +88,7 @@ In the following image, this same algorithm is shown with different targets.
   &nbsp;&nbsp;&nbsp;
 </p>
 
-In the last image, you can see that I was practically close to solving the problem. As observed, the repulsion vector was well-scaled, but the attraction vector was too long, giving it too much influence on the resulting vector. This caused the movement to be uncontrolled and the robot not to avoid obstacles properly. Ultimately, I understood that I also needed to limit the attraction vector to balance both vectors and make the algorithm work correctly.
-
+The next step was to address the obstacles. This involved assigning a very high cost to the obstacle areas so that the taxi would avoid them during navigation. Additionally, it was necessary to expand the obstacles' influence area to increase the safety margin while the robot navigates. As I will mention in the challenges section, I went through several modifications before arriving at the current solution, which can be seen in the following images. The solution involves creating a separate map where the obstacles (and all their areas) are marked with high costs, while the paths are marked with zeros. This way, when the cost maps are combined, only the obstacle costs are added, and the paths remain clear, guiding the taxi around the obstacles efficiently.
 
 <p align="center">
   <img src="p4images/firstversion.png" alt="First solution" width="40%" style="border: 2px solid black;">
@@ -98,8 +97,10 @@ In the last image, you can see that I was practically close to solving the probl
   &nbsp;&nbsp;&nbsp;
 </p>
 
+Finally, the navigation step was implemented. This involved checking a movement window around the robot to evaluate the cost of the path in each cell, ensuring that the car moved toward the target without colliding with obstacles. The position of the robot on the map was constantly monitored to determine its next move. This part of the process wasn't very difficult to implement.To complete the navigation correctly, I had to increase the iterations of the expansion algorithm to prevent the robot from getting confused while navigating. The result of this final implementation can be seen in the following image.
+
 <p align="center">
-  <img src="p4images/apiece.png" alt="Final solution" width="70%" style="border: 2px solid black;">
+  <img src="p4images/apiece.png" alt="Final solution" width="50%" style="border: 2px solid black;">
   &nbsp;&nbsp;&nbsp;
 </p>
 
