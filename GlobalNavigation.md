@@ -91,13 +91,11 @@ However, as shown in the image and described in the process of creating the repu
 
 In the last image, you can see that I was practically close to solving the problem. As observed, the repulsion vector was well-scaled, but the attraction vector was too long, giving it too much influence on the resulting vector. This caused the movement to be uncontrolled and the robot not to avoid obstacles properly. Ultimately, I understood that I also needed to limit the attraction vector to balance both vectors and make the algorithm work correctly.
 
-<p align="center">
-  <img src="p4images/firstversion.png" alt="First solution" width="70%" style="border: 2px solid black;">
-  &nbsp;&nbsp;&nbsp;
-</p>
 
 <p align="center">
-  <img src="p4images/secondversion.png" alt="Second solution" width="70%" style="border: 2px solid black;">
+  <img src="p4images/firstversion.png" alt="First solution" width="40%" style="border: 2px solid black;">
+  &nbsp;&nbsp;&nbsp;
+  <img src="p4images/secondversion.png" alt="Second solution" width="40%" style="border: 2px solid black;">
   &nbsp;&nbsp;&nbsp;
 </p>
 
@@ -119,7 +117,7 @@ When the vector began to work relatively well, obstacles were successfully avoid
 After a few adjustments, I managed to solve the issue and optimize the calculation. Below are two images of the vectors I had initially generated:
 
 <p align="center">
- <img src="p4images/finalmap.png" alt="Final map" width="50%" style="border: 2px solid black;">
+ <img src="p4images/finalmap.png" alt="Final map" width="60%" style="border: 2px solid black;">
   &nbsp;&nbsp;&nbsp;
 </p>
 
