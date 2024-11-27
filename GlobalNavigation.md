@@ -119,7 +119,7 @@ When the vector began to work relatively well, obstacles were successfully avoid
 After a few adjustments, I managed to solve the issue and optimize the calculation. Below are two images of the vectors I had initially generated:
 
 <p align="center">
- <img src="p4images/finalmap.png" alt="Final map" width="30%" style="border: 2px solid black;">
+ <img src="p4images/finalmap.png" alt="Final map" width="50%" style="border: 2px solid black;">
   &nbsp;&nbsp;&nbsp;
 </p>
 
